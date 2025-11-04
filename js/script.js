@@ -123,3 +123,27 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+const carousel = document.querySelector('.projects-carousel');
+const cards = document.querySelectorAll('.project-card');
+
+let scrollAmount = 0;
+const cardWidth = cards[0].offsetWidth + 16; // card + gap
+const scrollSpeed = 2500; // tempo entre rolagens (ms)
+
+function autoScroll() {
+  scrollAmount += cardWidth;
+  
+  if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
+    scrollAmount = 0; // volta pro início
+  }
+
+  carousel.scrollTo({
+    left: scrollAmount,
+    behavior: 'smooth'
+  });
+}
+
+// roda automaticamente
+setInterval(autoScroll, scrollSpeed);
