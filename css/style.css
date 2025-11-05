@@ -197,11 +197,14 @@ body{
 
 /* About list */
 .about-list{
-  padding: 10px;       /* espaço interno da div */
-  margin: 0;           /* remove margens externas */
-  list-style: none;    /* remove os marcadores padrão da lista */
-  max-width: 100%;     /* garante que não ultrapasse a div pai */
-  box-sizing: border-box; /* inclui padding dentro do tamanho total */
+  list-style: disc inside;
+  padding: 0 1.6rem;         /* espaçamento lateral equilibrado */
+  margin-top: 1rem;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 90%;
+  margin-inline: auto;       /* centraliza a lista */
+  text-decoration: none;
 }
 
 
@@ -209,6 +212,8 @@ body{
   color:var(--muted);
   padding: 5px 0;      /* espaço entre os itens da lista */
   word-wrap: break-word; /* quebra palavras longas se necessário */
+  margin-bottom: .4rem;      /* espaço entre os itens */
+  text-decoration: none;
 }
 
 /* Stats mini-grid */
