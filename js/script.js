@@ -130,7 +130,7 @@ const cards = document.querySelectorAll('.project-card');
 
 let scrollAmount = 0;
 const cardWidth = cards[0].offsetWidth + 16; // card + gap
-const scrollSpeed = 2500; // tempo entre rolagens (ms)
+const scrollSpeed = 5500; // tempo entre rolagens (ms)
 
 function autoScroll() {
   scrollAmount += cardWidth;
